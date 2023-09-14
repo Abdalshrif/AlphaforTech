@@ -1,6 +1,10 @@
 <?php
 
+//use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +19,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+
+//Route::get('/', 'Controller@index')->name('home');
+//Route::get('/contact-us',[ContactController::class,'contact']);
+//Route::redirect('contact','/');
+
+Route::post('contact',[ContactController::class,'sendEmail'])->name('contact.us');
+//Route::get('/sendmail',[MailController::class,'sendMail']);
