@@ -1,5 +1,7 @@
-# AlphaforTech
-This is our website company
+## AlphaforTech
+This website for Alpha4Tech company 
+
+### Getting Started
 
 Clone this repo using any method (https, ssh, gh cli)
 
@@ -15,3 +17,6 @@ php artisan migrate --seed
 
 Start the local server using the command
 php artisan serve
+
+
+
